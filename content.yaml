@@ -1,3 +1,77 @@
 bio: >
-  My name is Tomás Ortín Fernández (quanrong). I'm from Spain, living in a little mountain village in the North.
-  I'm currently participating in the <a href="https://fellowship.mlh.com/programs/production-engineering-sre">MLH x Meta Production Engineering Fellowship</a>.
+  My name is Tomás Ortín Fernández (quanrong). I'm from Spain, living in a little
+  mountain village in the North. I have contributed patches to the
+  <a href="https://gcc.gnu.org">GNU Compiler Collection</a> extending its static
+  analyzer, accepted for GCC 17. I attended the
+  <a href="https://www.recurse.com">Recurse Center</a> in 2025. I also maintain
+  packages for <a href="https://guix.gnu.org">GNU Guix</a> and enjoy building
+  things from scratch. Currently participating in the
+  <a href="https://fellowship.mlh.com/programs/production-engineering-sre">MLH x Meta Production Engineering Fellowship</a>.
+
+experience:
+  - title: "Participant"
+    organization: "Recurse Center"
+    period: "2025 – 2026"
+    description: >
+      Self-directed educational retreat for programmers. Pair programmed on
+      programming language implementation and systems programming projects.
+  - title: "Prep Fellow"
+    organization: "Major League Hacking Prep Program"
+    period: "2023"
+    description: >
+      Collaborated with international fellows to build a weather web app.
+      Implemented a Go proxy service to securely handle third-party API calls
+      from the backend.
+
+education:
+  - title: "BSc in Computer Science, First Class Honours"
+    organization: "University of London (UoL)"
+    period: "2022 – 2025"
+  - title: "BA in Asian Cultural Studies (China)"
+    organization: "Universidad Autónoma de Madrid (UAM)"
+    period: "2016 – 2022"
+  - title: "Professional Certificates: Data Science, AI Engineering (IBM); IT Support (Google)"
+    organization: ~
+    period: "2022 – 2024"
+
+projects:
+  - title: "GNU Compiler Collection (GCC)"
+    description: >
+      Extended the static analyzer (<code>-fanalyzer</code>) with handlers for the
+      mktemp family. Added argument validation, three new warning flags, and
+      success/failure path bifurcation enabling fd leak and double-close detection.
+      Three patches accepted for GCC 17.
+    period: "2026 –"
+    url: ~
+  - title: "Dolus: Scheme to x86_64 compiler"
+    description: >
+      Building a compiler from Scheme to native x86_64 assembly in OCaml with
+      register allocation. Under development.
+    period: "2025 –"
+    url: "https://codeberg.org/quanrong/dolus"
+  - title: "Data Collection Project"
+    description: >
+      Survey platform with a real-time LLM conversational agent for L2 English
+      research, in collaboration with Universitat de Barcelona. Rails application
+      with speaking tasks, FastAPI service using OLMo2, Whisper, and piper-tts.
+    period: "2024 – 2025"
+    url: "https://codeberg.org/quanrong/videogames_survey"
+  - title: "Anthill: Real-time top-down shooter"
+    description: >
+      Top-down shooter in Go with infinite procedural world generation. Collision
+      detection and pathfinding implemented from scratch.
+    period: "2025"
+    url: "https://codeberg.org/quanrong/anthill"
+  - title: "PolyML Standard ML Compiler - Bug fixes"
+    description: >
+      Fixed bugs in <code>IEEEReal.scan</code> and <code>Word.toInt</code> related
+      to incorrect overflow handling, bringing behavior into compliance with the
+      Standard ML specification.
+    period: "2024"
+    url: ~
+  - title: "GNU Guix Package Manager"
+    description: >
+      Contributed several packages to GNU Guix, a functional package manager for
+      GNU/Linux systems.
+    period: "2021 –"
+    url: ~
