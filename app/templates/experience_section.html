@@ -1,0 +1,24 @@
+{% macro experience_section(title, items) %}
+<section class="about">
+  <h2>{{ title }}</h2>
+  <ul class="entry-list">
+    {% for item in items %}
+    <li class="entry">
+      <div class="entry-header">
+        <strong>{{ item.title }}</strong>
+        <small>{{ item.period }}</small>
+      </div>
+      {% if item.organization %}
+      <span class="entry-subtitle">{{ item.organization }}</span>
+      {% endif %}
+      {% if item.description %}
+      <p>{{ item.description | safe }}</p>
+      {% endif %}
+      {% if item.url %}
+      <a href="{{ item.url }}">{{ item.url }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endmacro %}

@@ -19,6 +19,8 @@
     <title>{{ title }}</title>
 </head>
 
+{% from "experience_section.html" import experience_section %}
+
 <body>
     <header class="nav-bar">
         <div class="nav-content">
@@ -39,7 +41,10 @@
 
     <section class="about">
       <h2>About Me</h2>
-      {{ bio | safe }}
+      <p>{{ bio | safe }}</p>
     </section>
+    {{ experience_section("Experience", experience) }}
+    {{ experience_section("Education", education) }}
+    {{ experience_section("Projects", projects) }}
 </body>
 </html>
