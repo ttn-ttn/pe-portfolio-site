@@ -10,17 +10,18 @@ nav:
     url: "/hobbies"
     template: "hobbies.html"
 
-title: "MLH Fellow"
-
-bio: >
-  My name is Tomás Ortín Fernández (quanrong). I'm from Spain, living in a little
-  mountain village in the North. I have contributed patches to the
-  <a href="https://gcc.gnu.org">GNU Compiler Collection</a> extending its static
-  analyzer, accepted for GCC 17. I attended the
-  <a href="https://www.recurse.com">Recurse Center</a> in 2025. I also maintain
-  packages for <a href="https://guix.gnu.org">GNU Guix</a> and enjoy building
-  things from scratch. Currently participating in the
-  <a href="https://fellowship.mlh.com/programs/production-engineering-sre">MLH x Meta Production Engineering Fellowship</a>.
+# Personal data
+personal:
+  name: "MLH Fellow"
+  bio: >-   # Plain text bio, HTML tags are allowed
+    My name is Tomás Ortín Fernández (quanrong). I'm from Spain, living in a little
+    mountain village in the North. I have contributed patches to the
+    <a href="https://gcc.gnu.org">GNU Compiler Collection</a> extending its static
+    analyzer, accepted for GCC 17. I attended the
+    <a href="https://www.recurse.com">Recurse Center</a> in 2025. I also maintain
+    packages for <a href="https://guix.gnu.org">GNU Guix</a> and enjoy building
+    things from scratch. Currently participating in the
+    <a href="https://fellowship.mlh.com/programs/production-engineering-sre">MLH x Meta Production Engineering Fellowship</a>.
 
 experience:
   - title: "Participant"
