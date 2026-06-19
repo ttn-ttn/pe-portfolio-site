@@ -24,3 +24,5 @@ nav:
   - name: "About Me"
     url: "/"
     template: "index.html"
+
+title: "MLH Fellow"

@@ -27,6 +27,7 @@
             <img src="./static/img/logo.svg" />
           </div>
         </a>
+	<h1>{{ title }}</h1>
 	<nav>
 	  {% for link in nav %}
 	  <a href="{{ link.url }}"
@@ -38,12 +39,6 @@
       </div>
     </header>
 
-    <div class="profile">
-      <div id="profile-picture" class="profile-picture">
-        <img src="./static/img/logo.jpg">
-      </div>
-      <h1>{{ title }}</h1>
-    </div>
 
     {% block content %}
     {% endblock %}

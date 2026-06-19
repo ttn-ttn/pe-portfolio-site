@@ -22,5 +22,5 @@ for page in content['nav']:
     app.add_url_rule(
         url,
         endpoint,
-        lambda t=template: render_template(t, title=page['name'])
+        lambda t=template, p=page: render_template(t, page=p)
     )
