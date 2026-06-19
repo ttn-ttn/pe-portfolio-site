@@ -1,0 +1,33 @@
+{% macro intro(personal, picture=None) %}
+<section class="intro">
+    <div class="intro-picture">
+        {% if picture %}
+        <img src="{{ url_for('static', filename='img/' + picture) }}" alt="{{ personal.name }}">
+        {% endif %}
+    </div>
+
+    <div class="intro-body">
+        <h1>Hi, I'm {{ personal.name }}</h1>
+
+        {# Default body content: bio + interests #}
+        <p>{{ personal.bio | safe }}</p>
+
+        {% if personal.interests %}
+        <div class="interests">
+            {% for interest in personal.interests %}
+            <div class="interest">{{ interest }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    {% if title %}
+    <h2>{{ title }}</h2>
+    {% endif %}
+
+    {# Extra content from caller (only when used via `{% call intro(...) %}`) #}
+    {% if caller is defined %}
+    {{ caller() }}
+    {% endif %}
+</section>
+{% endmacro %}
