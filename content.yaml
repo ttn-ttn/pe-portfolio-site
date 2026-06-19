@@ -3,6 +3,12 @@ nav:
   - name: "About Me"
     url: "/"
     template: "index.html"
+  - name: "Projects"
+    url: "/projects"
+    template: "projects.html"
+  - name: "Hobbies"
+    url: "/hobbies"
+    template: "hobbies.html"
 
 title: "MLH Fellow"
 
