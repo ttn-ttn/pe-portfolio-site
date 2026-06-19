@@ -4,7 +4,6 @@ body {
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
-    text-align: center;
 }
 
 .nav-bar {
@@ -570,5 +569,53 @@ body {
 }
 
 .card:first-of-type {
-  margin-top: 10px; /* ensures a pleasant rhythm immediately after the divider */
+  margin-top: 10px;
+}
+
+
+.site-footer {
+  border-top: 1px solid #e6e8ef;
+  margin: 32px 0 0;
+  padding: 18px 0 26px;
+  background: transparent;
+}
+
+.footer-inner {
+  max-width: 980px;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-name {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-socials a {
+  color: #1d539f;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.footer-socials a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .footer-inner {
+    justify-content: center;
+    text-align: center;
+  }
 }

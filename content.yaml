@@ -29,14 +29,22 @@ personal:
   interests:
     - "Programming Languages"
     - "Systems Programming"
-    - "AI Engineering"
-    - "Data Science"
     - "Compilers"
     - "Open Source"
     - "Hiking"
     - "Reading"
     - "Cooking"
     - "Guitar"
+
+  socials:
+    - name: "GitHub"
+      url: "https://github.com/#"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/#/"
+    - name: "Codeberg"
+      url: "https://codeberg.org/#"
+    - name: "Email"
+      url: "mailto:#"
 
 experience:
   - title: "Participant"
