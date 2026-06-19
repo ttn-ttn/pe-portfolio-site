@@ -24,5 +24,8 @@ nav:
   - name: "About Me"
     url: "/"
     template: "index.html"
+  - name: "Projects"
+    url: "/projects"
+    template: "projects.html"
 
 title: "MLH Fellow"

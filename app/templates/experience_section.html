@@ -1,6 +1,6 @@
-{% macro experience_section(title, items) %}
+{% macro experience_section(items, title=none) %}
 <section class="card">
-  <h2>{{ title }}</h2>
+  {% if title %}<h2>{{ title }}</h2>{% endif %}
   <ul class="entry-list">
     {% for item in items %}
     <li class="entry">

@@ -3,13 +3,11 @@
 
 {% block content %}
 <section class="card">
-  <h2>{{ page.name }}</h2>
   <div class="card-bio">
     <img src="./static/img/logo.jpg">
     <p>{{ bio | safe }}</p>
   </div>
 </section>
-{{ experience_section("Experience", experience) }}
-{{ experience_section("Education", education) }}
-{{ experience_section("Projects", projects) }}
+{{ experience_section(experience, title="Experience") }}
+{{ experience_section(education, title="Education") }}
 {% endblock %}
