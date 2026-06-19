@@ -136,3 +136,5 @@ body {
     object-fit: cover;
     flex-shrink: 0;
 }
+
+#map { height: 400px; }

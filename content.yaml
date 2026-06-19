@@ -6,6 +6,9 @@ nav:
   - name: "Projects"
     url: "/projects"
     template: "projects.html"
+  - name: "Places Visited"
+    url: "/travel"
+    template: "travel.html"
 
 # Personal data
 personal:
@@ -31,3 +34,7 @@ projects:
     period: "" # Required
     url: ~ # Omit with ~
 
+places:
+  - name: "Amsterdam" # Example place
+    lat: 52.3676
+    lon: 4.9041
