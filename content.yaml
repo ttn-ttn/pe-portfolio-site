@@ -1,6 +1,17 @@
-# Plain text bio, HTML tags are allowed
-bio: >
-  Lorem ipsum...
+# Website structure
+nav:
+  - name: "About Me"
+    url: "/"
+    template: "index.html"
+  - name: "Projects"
+    url: "/projects"
+    template: "projects.html"
+
+# Personal data
+personal:
+  name: "MLH Fellow"
+  bio: >-   # Plain text bio, HTML tags are allowed
+    Lorem ipsum...
 
 experience:
   - title: "" # Required, HTML allowed
@@ -19,13 +30,3 @@ projects:
     period: "" # Required
     url: ~ # Omit with ~
 
-# Website structure
-nav:
-  - name: "About Me"
-    url: "/"
-    template: "index.html"
-  - name: "Projects"
-    url: "/projects"
-    template: "projects.html"
-
-title: "MLH Fellow"
