@@ -1,24 +1,25 @@
+{% from "card.html" import card %}
+
 {% macro experience_section(items, title=none) %}
-<section class="card">
-  {% if title %}<h2>{{ title }}</h2>{% endif %}
-  <ul class="entry-list">
-    {% for item in items %}
-    <li class="entry">
-      <div class="entry-header">
-        <strong>{{ item.title }}</strong>
-        <small>{{ item.period }}</small>
-      </div>
-      {% if item.organization %}
-      <span class="entry-subtitle">{{ item.organization }}</span>
-      {% endif %}
-      {% if item.description %}
-      <p>{{ item.description | safe }}</p>
-      {% endif %}
-      {% if item.url %}
-      <a href="{{ item.url }}">{{ item.url }}</a>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-</section>
+{% call card(title=title) %}
+<ul class="entry-list">
+  {% for item in items %}
+  <li class="entry">
+    <div class="entry-header">
+      <strong>{{ item.title }}</strong>
+      <small>{{ item.period }}</small>
+    </div>
+    {% if item.organization %}
+    <span class="entry-subtitle">{{ item.organization }}</span>
+    {% endif %}
+    {% if item.description %}
+    <p>{{ item.description | safe }}</p>
+    {% endif %}
+    {% if item.url %}
+    <a href="{{ item.url }}">{{ item.url }}</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endcall %}
 {% endmacro %}

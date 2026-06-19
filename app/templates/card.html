@@ -1,0 +1,7 @@
+{% macro card(title=none, picture=none) %}
+<section class="card">
+  {% if picture %}<img class="card-picture" src="{{ picture }}">{% endif %}
+  {% if title %}<h2>{{ title }}</h2>{% endif %}
+  {{ caller() }}
+</section>
+{% endmacro %}

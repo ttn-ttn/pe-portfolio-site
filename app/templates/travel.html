@@ -10,10 +10,12 @@
   crossorigin=""></script>
 {% endblock %}
 
+{% from "card.html" import card %}
+
 {% block content %}
-<section class="card">
+{% call card(title=title) %}
   <div id="map"></div>
-</section>
+{% endcall %}
 <script type="module">
   import { markLocations } from "{{ url_for('static', filename='js/travel.js') }}";
   markLocations({{ places | tojson }});
