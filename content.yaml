@@ -1,3 +1,11 @@
+# Website structure
+nav:
+  - name: "About Me"
+    url: "/"
+    template: "index.html"
+
+title: "MLH Fellow"
+
 bio: >
   My name is Tomás Ortín Fernández (quanrong). I'm from Spain, living in a little
   mountain village in the North. I have contributed patches to the

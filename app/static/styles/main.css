@@ -1,11 +1,6 @@
-p, h1, h2, h3, h4, h5, h6, button {
-    font-family: "Roboto", serif;
-}
-
 body {
     background-color: #f5f5f9;
-    background-size: cover;
-    width: auto; 
+    width: auto;
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
@@ -13,28 +8,28 @@ body {
 
 .nav-bar {
     width: 100%;
-    display: inline-block;
+    display: block;
     background-color: #1C539F;
-    font-family: "Roboto", serif;
-    font-weight: 700 !important;
-    padding-top: 10px;
+    font-weight: 700;
+    padding: 10px 0 6px;
 }
 
-.nav-content .logo-touch-target {
-    display: inline-flex;
-    height: 60%;
-    width: 350px;
-}
-
-.nav-content .nav-logo {
-    height: 60px;
-    margin: auto;
+.nav-bar h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    padding: 8px 0;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 60px;
+    margin: auto auto 12px;
 }
 
 .nav-logo img {
@@ -42,51 +37,38 @@ body {
 }
 
 .nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 0px;
-    padding-right: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 2px 0 0;
 }
 
-.profile {
-    background-color: #1d539f !important;
-    text-align: center;
-    height: 320px;
-    margin-bottom: 50px;
+.nav-content nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
 }
 
-.profile h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: white;
+.nav-content nav a.active {
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
 }
 
-.profile img {
-        border-radius: 20%;
-        max-width: 100%;
-        max-height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;        
-        padding: 20px;
+.card:first-of-type {
+    margin-top: 48px;
 }
 
-.profile .profile-picture {
-    margin-bottom: 30px;
-    height: 200px;
-}
-
-.about {
+.card {
     max-width: 720px;
-    margin: 0 auto 60px;
+    margin: 24px auto;
     padding: 40px 32px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.about h2 {
+.card h2 {
     font-size: 28px;
     font-weight: 700;
     color: #1d539f;
@@ -94,28 +76,23 @@ body {
     margin-bottom: 16px;
 }
 
-.about p {
+.card p {
     font-size: 16px;
     line-height: 1.7;
     color: #333;
     margin: 0;
 }
 
-.banner {
-    padding: 20px 0px 50px 0px;
-    height: 150px;
-    background-color: #1d539f;
+.card-bio {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
 }
 
-.banner .logo {
-    max-width:180px;
-    max-height:60px;
-    width: auto;
-    height: auto;
-}
-
-.banner .title {
-    color: white;
-    font-size: 50px;
-    font-weight: 700;
+.card-bio img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
