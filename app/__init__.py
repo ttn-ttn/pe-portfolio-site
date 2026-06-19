@@ -7,7 +7,11 @@ load_dotenv()
 app = Flask(__name__)
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-with open(os.path.join(base_dir, "../content.yaml")) as f:
+content_path = os.getenv("CONTENT", "content.yaml")
+if not os.path.isabs(content_path):
+    content_path = os.path.join(base_dir, "..", content_path)
+
+with open(content_path) as f:
     content = yaml.safe_load(f)
 
 @app.context_processor
