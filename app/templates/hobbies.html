@@ -1,7 +1,10 @@
 {% extends "base.html" %}
+{% from "card.html" import card %}
 
 {% block content %}
-<section class="card">
-  Hobbies here...
-</section>
+{% for hobby in hobbies %}
+{% call card(title=hobby.title, picture=url_for('static', filename='img/' + hobby.picture)) %}
+<p>{{ hobby.description | safe }}</p>
+{% endcall %}
+{% endfor %}
 {% endblock %}

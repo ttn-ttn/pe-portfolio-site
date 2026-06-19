@@ -95,6 +95,32 @@ projects:
     period: "2021 –"
     url: ~
 
+hobbies:
+  - title: "Reading"
+    picture: "hobby-reading.jpg"
+    description: >-
+      Mostly nonfiction: philosophy (particularly the perennial tradition: Huxley,
+      Watts), spirituality and religion, history, and science (e.g psychopharmacology).
+      I also read old science fiction, classical fiction, and technical programming books.
+  - title: "Hiking"
+    picture: "hobby-hiking.jpg"
+    description: >-
+      I go out every day and do a full day-long hike once a week in the Cantabrian
+      mountains. I enjoy camping and sleeping in open shepherd's huts. I hike both
+      solo and with my girlfriend, and almost always with my 14-year-old dog.
+  - title: "Programming"
+    picture: "hobby-programming.jpg"
+    description: >-
+      Outside of projects, I enjoy writing toy interpreters and learning programming
+      languages with different paradigms: Lisp, OCaml, Elixir. Lisp in particular
+      changed how I think. Discovering homoiconicity and the idea that code is data
+      is something I keep finding relevant even in languages that do not support it.
+  - title: "Kitchen Chemistry"
+    picture: "hobby-chemistry.jpg"
+    description: >-
+      I enjoy simple practical chemistry experiments at home. Simple processes like
+      alkaloid extractions, nothing elaborate.
+
 places:
   - name: "Xiamen"
     lat: 24.4798
