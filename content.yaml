@@ -15,312 +15,156 @@ nav:
 
 # Personal data
 personal:
-  name: "Tomás Ortín"
-  picture: "tomas.jpg"
-  bio: >-   # Plain text bio, HTML tags are allowed
-    My name is Tomás Ortín Fernández (quanrong). I'm from Spain, living in a little
-    mountain village in the North. I have contributed patches to the
-    <a href="https://gcc.gnu.org">GNU Compiler Collection</a> extending its static
-    analyzer, accepted for GCC 17. I attended the
-    <a href="https://www.recurse.com">Recurse Center</a> in 2025. I also maintain
-    packages for <a href="https://guix.gnu.org">GNU Guix</a> and enjoy building
-    things from scratch. Currently participating in the
-    <a href="https://fellowship.mlh.com/programs/production-engineering-sre">MLH x Meta Production Engineering Fellowship</a>.
+  name: "Ida Delphine"
+  picture: "ida.jpg"
+  bio: >-
+    Hello 👋, I'm Ida Delphine. I'm a software and mobile engineer based in the UK, 
+    specializing in software engineering, cloud computing, and artificial 
+    intelligence integration. I am currently pursuing my Master's in Software Engineering with Cloud Computing. 
+    I'm deeply passionate about open source, with past experience in projects like projects like 
+    <a href="https://smswithoutborders.com/">RelaySMS</a>. Currently, I am 
+    participating in the <a href="https://fellowship.mlh.com/programs/production-engineering-sre">MLH x Meta Production Engineering Fellowship</a>.
   interests:
-    - "Programming Languages"
-    - "Systems Programming"
-    - "Compilers"
+    - "Software Engineering"
+    - "Android Development"
     - "Open Source"
-    - "Hiking"
-    - "Reading"
-    - "Cooking"
-    - "Guitar"
+    - "Generative AI"
+    - "Cloud Computing"
+    - "Community Building"
+    - "Video Editing"
 
   socials:
     - name: "GitHub"
-      url: "https://github.com/#"
+      url: "https://github.com/Idadelveloper"
     - name: "LinkedIn"
-      url: "https://www.linkedin.com/in/#/"
-    - name: "Codeberg"
-      url: "https://codeberg.org/#"
-    - name: "Email"
-      url: "mailto:#"
+      url: "https://www.linkedin.com/in/idadelveloper"
+    - name: "DEV Community"
+      url: "https://dev.to/idadelveloper"
+    - name: "Medium"
+      url: "https://medium.com/@idadelveloper"
 
 experience:
-  - title: "Participant"
-    organization: "Recurse Center"
-    period: "2025 – 2026"
+  - title: "Meta Production Engineer Fellow"
+    organization: "MLH Fellowship"
+    period: "Jun 2026 - September 2026"
     description: >
-      Self-directed educational retreat for programmers. Pair programmed on
-      programming language implementation and systems programming projects.
-  - title: "Prep Fellow"
-    organization: "Major League Hacking Prep Program"
-    period: "2023"
+      The Meta Production Engineering Fellowship is a 12-week summer program that gave me hands-on experience in production engineering (also known as Site Reliability Engineering) alongside Meta engineers.
+  - title: "Software Engineer"
+    organization: "Afkanerd Technologies"
+    period: "Sep 2024 - Aug 2025"
     description: >
-      Collaborated with international fellows to build a weather web app.
-      Implemented a Go proxy service to securely handle third-party API calls
-      from the backend.
+      Developed and maintained Afkanerd Android mobile applications, specifically RelaySMS and DekuSMS. 
+      Maintained documentation for features and contributed to open source implementations.
+  - title: "Software Engineer Intern"
+    organization: "Afkanerd Technologies"
+    period: "Apr 2022 - Sep 2022"
+    description: >
+      Integrated Slack as a third-party platform for the SMS Without Borders (SWOB) apps[cite: 1]. 
+      Built the official blog website for Afkanerd.
+  - title: "Full Stack Developer Intern"
+    organization: "UNICEF Office of Innovation"
+    period: "Jul 2021 - Jan 2022"
+    description: >
+      Contributed to the front-end design and development of a template-driven documentation website for Open Source best practices recommended by UNICEF, improving its accessibility to the top 90%. 
+      Supported eight Open Source projects managed by different teams.
+  - title: "Software Engineer Intern"
+    organization: "Google Summer of Code (RTEMS Project)"
+    period: "Jun 2021 - Aug 2021"
+    description: >
+      Worked on automatic code formatting and style checking for RTEMS Supercore. 
+      Added standalone scripts and git commit hooks to create reports about style problems and check patches before committing.
+  - title: "Software Engineer Intern"
+    organization: "Outreachy (Yocto Project)"
+    period: "Dec 2020 - Mar 2021"
+    description: >
+      Developed a proof-of-concept implementation to link sources with SPDX headers to output files for the Yocto Project. 
+      Examined the accuracy of license tagging and reported a 90% increase in licenses during each release.
 
 education:
-  - title: "BSc in Computer Science, First Class Honours"
-    organization: "University of London (UoL)"
-    period: "2022 – 2025"
-  - title: "BA in Asian Cultural Studies (China)"
-    organization: "Universidad Autónoma de Madrid (UAM)"
-    period: "2016 – 2022"
-  - title: "Professional Certificates: Data Science, AI Engineering (IBM); IT Support (Google)"
-    organization: ~
-    period: "2022 – 2024"
+  - title: "MSc in Software Engineering with Cloud Computing"
+    organization: "City, St George's University of London, United Kingdom"
+    period: "2025 – 2026"
+  - title: "BEng in Computer Engineering"
+    organization: "University of Bamenda, Cameroon"
+    period: "2019-2023"
 
 projects:
-  - title: "GNU Compiler Collection (GCC)"
+  - title: "Knotes"
     description: >
-      Extended the static analyzer (<code>-fanalyzer</code>) with handlers for the
-      mktemp family. Added argument validation, three new warning flags, and
-      success/failure path bifurcation enabling fd leak and double-close detection.
-      Three patches accepted for GCC 17.
-    period: "2026 –"
-    url: ~
-  - title: "Dolus: Scheme to x86_64 compiler"
-    description: >
-      Building a compiler from Scheme to native x86_64 assembly in OCaml with
-      register allocation. Under development.
-    period: "2025 –"
-    url: "https://codeberg.org/quanrong/dolus"
-  - title: "Data Collection Project"
-    description: >
-      Survey platform with a real-time LLM conversational agent for L2 English
-      research, in collaboration with Universitat de Barcelona. Rails application
-      with speaking tasks, FastAPI service using OLMo2, Whisper, and piper-tts.
-    period: "2024 – 2025"
-    url: "https://codeberg.org/quanrong/videogames_survey"
-  - title: "Anthill: Real-time top-down shooter"
-    description: >
-      Top-down shooter in Go with infinite procedural world generation. Collision
-      detection and pathfinding implemented from scratch.
+      An AI-powered Progressive Web App designed to transform technical study 
+      materials into interactive auditory content using local-first AI APIs.
     period: "2025"
-    url: "https://codeberg.org/quanrong/anthill"
-  - title: "PolyML Standard ML Compiler - Bug fixes"
+    url: "https://github.com/Idadelveloper/knotes"
+  - title: "Deku-SMS-Android"
     description: >
-      Fixed bugs in <code>IEEEReal.scan</code> and <code>Word.toInt</code> related
-      to incorrect overflow handling, bringing behavior into compliance with the
-      Standard ML specification.
+      Android SMS app featuring end-to-end encryption (E2EE), Cloud Forwarding, 
+      and RabbitMQ integrations.
+    period: "2024 – 2025"
+    url: "https://github.com/Idadelveloper/Deku-SMS-Android"
+  - title: "Visa Bud"
+    description: >
+      A web application aimed at helping Africans maximize their chances of getting 
+      a visa using generative AI.
     period: "2024"
-    url: ~
-  - title: "GNU Guix Package Manager"
+    url: "https://github.com/Idadelveloper/visabud-frontend"
+  - title: "Craite"
     description: >
-      Contributed several packages to GNU Guix, a functional package manager for
-      GNU/Linux systems.
-    period: "2021 –"
-    url: ~
+      Leveraging Gemini to transform raw footage into captivating content. Built 
+      in Kotlin.
+    period: "2024"
+    url: "https://github.com/Idadelveloper/craite"
 
 hobbies:
-  - title: "Reading"
-    picture: "hobby-reading.jpg"
+  - title: "Technical Content Creation"
+    picture: "hobby-content.jpg"
     description: >-
-      Mostly nonfiction: philosophy (particularly the perennial tradition: Huxley,
-      Watts), spirituality and religion, history, and science (e.g psychopharmacology).
-      I also read old science fiction, classical fiction, and technical programming books.
-  - title: "Hiking"
-    picture: "hobby-hiking.jpg"
+      I enjoy playing with my mobile phone and creating content content
+      about random stuff or covering events.
+  - title: "Tech Community Building"
+    picture: "hobby-community.jpg"
     description: >-
-      I go out every day and do a full day-long hike once a week in the Cantabrian
-      mountains. I enjoy camping and sleeping in open shepherd's huts. I hike both
-      solo and with my girlfriend, and almost always with my 14-year-old dog.
-  - title: "Programming"
-    picture: "hobby-programming.jpg"
+      Organizing and leading developer events, hackathons, and programs like the 
+      Outreachy intern celebrations. I love connecting with like-minded developers.
+  - title: "Swimming"
+    picture: "hobby-swimming.jpg"
     description: >-
-      Outside of projects, I enjoy writing toy interpreters and learning programming
-      languages with different paradigms: Lisp, OCaml, Elixir. Lisp in particular
-      changed how I think. Discovering homoiconicity and the idea that code is data
-      is something I keep finding relevant even in languages that do not support it.
-  - title: "Kitchen Chemistry"
-    picture: "hobby-chemistry.jpg"
-    description: >-
-      I enjoy simple practical chemistry experiments at home. Simple processes like
-      alkaloid extractions, nothing elaborate.
+      It's a fun fact about me: swimming is my absolute favorite hobby, even though 
+      I am still learning how to actually swim! 
 
 places:
-  - name: "Xiamen"
-    lat: 24.4798
-    lon: 118.0894
-  - name: "Amsterdam"
-    lat: 52.3676
-    lon: 4.9041
-  - name: "San Francisco"
-    lat: 37.7749
-    lon: -122.4194
-  - name: "Yosemite"
-    lat: 37.8651
-    lon: -119.5383
-  - name: "Ceuta"
-    lat: 35.8894
-    lon: -5.3213
-  - name: "Geneva"
-    lat: 46.2044
-    lon: 6.1432
-  - name: "Madrid"
-    lat: 40.4168
-    lon: -3.7038
-  - name: "Barcelona"
-    lat: 41.3851
-    lon: 2.1734
-  - name: "Gijón"
-    lat: 43.5322
-    lon: -5.6611
-  - name: "Toulouse"
-    lat: 43.6047
-    lon: 1.4442
-  - name: "Manchester"
-    lat: 53.4808
-    lon: -2.2426
+  - name: "Kigali"
+    lat: -1.9441
+    lon: 30.0619
+  - name: "Johannesburg"
+    lat: -26.2041
+    lon: 28.0473
+  - name: "Brussels"
+    lat: 50.8503
+    lon: 4.3517
+  - name: "Addis Ababa"
+    lat: 9.0300
+    lon: 38.7400
+  - name: "Nairobi"
+    lat: -1.2921
+    lon: 36.8219
+  - name: "Yaounde"
+    lat: 3.8480
+    lon: 11.5021
+  - name: "Douala"
+    lat: 4.0511
+    lon: 9.7679
+  - name: "Bamenda"
+    lat: 5.9586
+    lon: 10.1527
+  - name: "Limbe"
+    lat: 4.0167
+    lon: 9.2167
+  - name: "Buea"
+    lat: 4.1550
+    lon: 9.2405
   - name: "London"
     lat: 51.5074
     lon: -0.1278
-  - name: "Marseille"
-    lat: 43.2965
-    lon: 5.3698
-  - name: "Majorca"
-    lat: 39.5696
-    lon: 2.6502
-  - name: "Ibiza"
-    lat: 38.9067
-    lon: 1.4206
-  - name: "Rome"
-    lat: 41.9028
-    lon: 12.4964
-  - name: "'s-Hertogenbosch"
-    lat: 51.6978
-    lon: 5.3037
-  - name: "Torrevieja"
-    lat: 37.9781
-    lon: -0.6814
-  - name: "Bern"
-    lat: 46.9480
-    lon: 7.4474
-  - name: "Zurich"
-    lat: 47.3769
-    lon: 8.5417
-  - name: "Rotterdam"
-    lat: 51.9244
-    lon: 4.4777
-  - name: "Paris"
-    lat: 48.8566
-    lon: 2.3522
-  - name: "Santander"
-    lat: 43.4623
-    lon: -3.8099
-  - name: "Girona"
-    lat: 41.9794
-    lon: 2.8214
-  - name: "Toledo"
-    lat: 39.8628
-    lon: -4.0273
-  - name: "Benasque"
-    lat: 42.6089
-    lon: 0.5228
-  - name: "Santo Domingo de la Calzada"
-    lat: 42.4403
-    lon: -2.9524
-  - name: "Thoiry"
-    lat: 46.2372
-    lon: 5.9806
-  - name: "Reno"
-    lat: 39.5296
-    lon: -119.8138
-  - name: "Salamanca"
-    lat: 40.9701
-    lon: -5.6635
-  - name: "Valladolid"
-    lat: 41.6523
-    lon: -4.7245
-  - name: "Zaragoza"
-    lat: 41.6488
-    lon: -0.8891
-  - name: "Burgos"
-    lat: 42.3440
-    lon: -3.6969
-  - name: "León"
-    lat: 42.5987
-    lon: -5.5671
-  - name: "Palencia"
-    lat: 42.0097
-    lon: -4.5288
-  - name: "Valencia"
-    lat: 39.4699
-    lon: -0.3763
-  - name: "Alicante"
-    lat: 38.3452
-    lon: -0.4815
-  - name: "Kandersteg"
-    lat: 46.4977
-    lon: 7.6716
-  - name: "Eindhoven"
-    lat: 51.4416
-    lon: 5.4697
-  - name: "The Hague"
-    lat: 52.0705
-    lon: 4.3007
-  - name: "San Sebastián"
-    lat: 43.3183
-    lon: -1.9812
-  - name: "Irún"
-    lat: 43.3389
-    lon: -1.7881
-  - name: "Ciudad Rodrigo"
-    lat: 40.5978
-    lon: -6.5344
-  - name: "Portbou"
-    lat: 42.4295
-    lon: 3.1617
-  - name: "Figueres"
-    lat: 42.2669
-    lon: 2.9604
-  - name: "Huesca"
-    lat: 42.1401
-    lon: -0.4089
-  - name: "Córdoba"
-    lat: 37.8882
-    lon: -4.7794
-  - name: "Granada"
-    lat: 37.1773
-    lon: -3.5986
-  - name: "Sevilla"
-    lat: 37.3891
-    lon: -5.9845
-  - name: "Segovia"
-    lat: 40.9429
-    lon: -4.1088
-  - name: "Ávila"
-    lat: 40.6564
-    lon: -4.6816
-  - name: "Mérida"
-    lat: 38.9166
-    lon: -6.3442
-  - name: "Ségobriga"
-    lat: 39.885
-    lon: -2.813
-  - name: "Avignon"
-    lat: 43.9493
-    lon: 4.8055
-  - name: "L'Aquila"
-    lat: 42.3498
-    lon: 13.3995
-  - name: "Chamonix"
-    lat: 45.9237
-    lon: 6.8694
-  - name: "Palo Alto"
-    lat: 37.4419
-    lon: -122.1430
-  - name: "Monterey"
-    lat: 36.6002
-    lon: -121.8947
-  - name: "Sant Celoni"
-    lat: 41.6921
-    lon: 2.4956
-  - name: "Colmenar Viejo"
-    lat: 40.6611
-    lon: -3.7656
-  - name: "Rubí"
-    lat: 41.4933
-    lon: 2.0324
+  - name: "Birmingham"
+    lat: 52.4862
+    lon: -1.8904
