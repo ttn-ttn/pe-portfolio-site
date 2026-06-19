@@ -9,6 +9,6 @@ L.tileLayer(
 
 export function markLocations(locations) {
   locations.forEach(loc => {
-    L.marker(loc).addTo(map);
+    L.marker([loc.lat, loc.lon]).bindTooltip(loc.name).addTo(map);
   });
 }
