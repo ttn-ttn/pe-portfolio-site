@@ -75,6 +75,7 @@ body {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flow-root;
 }
 
 .card h2 {
@@ -126,10 +127,10 @@ body {
 .card-picture {
     float: right;
     margin: 0 0 16px 24px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .card-bio {
