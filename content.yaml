@@ -18,3 +18,9 @@ projects:
     description: "" # HTML allowed
     period: "" # Required
     url: ~ # Omit with ~
+
+# Website structure
+nav:
+  - name: "About Me"
+    url: "/"
+    template: "index.html"
