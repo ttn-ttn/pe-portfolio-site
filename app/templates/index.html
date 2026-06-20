@@ -1,14 +1,12 @@
 {% extends "base.html" %}
-{% from "card.html" import card %}
+{% from "intro.html" import intro %}
 {% from "experience_section.html" import experience_section %}
 
 {% block content %}
-{% call card() %}
-<div class="card-bio">
-  <img src="{{ url_for('static', filename='img/' + personal.picture) }}">
-  <p>{{ personal.bio | safe }}</p>
-</div>
-{% endcall %}
-{{ experience_section(experience, title="Experience") }}
-{{ experience_section(education, title="Education") }}
+    {{ intro(personal, picture=personal.picture) }}
+
+    <div class="section-separator" role="separator" aria-hidden="true"></div>
+
+    {{ experience_section(experience, title="Experience") }}
+    {{ experience_section(education, title="Education") }}
 {% endblock %}

@@ -28,7 +28,6 @@
             <img src="./static/img/logo.svg" />
           </div>
         </a>
-	<h1>{{ personal.name }}</h1>
 	<nav>
 	  {% for link in nav %}
 	  <a href="{{ link.url }}"
@@ -40,11 +39,21 @@
       </div>
     </header>
 
-
-    <h2 class="page-title">{{ page.name }}</h2>
-
     {% block content %}
     {% endblock %}
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-name">&copy; {{ personal.name }}</div>
+        {% if personal.socials %}
+        <nav class="footer-socials" aria-label="Social links">
+          {% for s in personal.socials %}
+          <a href="{{ s.url }}" target="_blank" rel="me noopener noreferrer">{{ s.name }}</a>
+          {% endfor %}
+        </nav>
+        {% endif %}
+      </div>
+    </footer>
 
   </body>
 </html>
