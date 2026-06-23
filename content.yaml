@@ -30,21 +30,18 @@ personal:
     - "Programming Languages"
     - "Systems Programming"
     - "Compilers"
-    - "Open Source"
+    - "Free Software"
     - "Hiking"
     - "Reading"
-    - "Cooking"
-    - "Guitar"
+    - "Basic Chemistry"
 
   socials:
-    - name: "GitHub"
-      url: "https://github.com/#"
-    - name: "LinkedIn"
-      url: "https://www.linkedin.com/in/#/"
     - name: "Codeberg"
-      url: "https://codeberg.org/#"
+      url: "https://codeberg.org/quanrong"
+    - name: "GitHub"
+      url: "https://github.com/ttn-ttn"
     - name: "Email"
-      url: "mailto:#"
+      url: "mailto:quanrong@mailbox.org"
 
 experience:
   - title: "Participant"
