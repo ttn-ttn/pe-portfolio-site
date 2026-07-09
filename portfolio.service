@@ -13,7 +13,7 @@ Environment=HOME=/srv/portfolio
 Environment=UV_DATA_HOME=/srv/portfolio/.uv/data
 Environment=UV_CACHE_HOME=/srv/portfolio/.uv/cache
 Environment=UV_PYTHON_INSTALL_DIR=/srv/portfolio/.uv/data/python
-Enviromnemt=TMPDIR=/srv/portfolio/.uv/tmp
+Environment=TMPDIR=/srv/portfolio/.uv/tmp
 SELinuxContext=system_u:system_r:httpd_t:s0
 
 [Install]
