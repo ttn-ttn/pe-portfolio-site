@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% from "card.html" import card %}
+
+{% block content %}
+<div class="page-title">Timeline</div>
+
+{% call card(title="Add a Post") %}
+<form id="timeline-form" class="timeline-form">
+  <div class="form-row">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+  <textarea name="content" placeholder="What's on your mind?" rows="3" required></textarea>
+  <button type="submit">Post</button>
+</form>
+{% endcall %}
+
+{% call card(title="Posts") %}
+<ul id="timeline-list" class="entry-list">
+  {% for post in timeline_posts %}
+  <li class="entry" data-id="{{ post.id }}">
+    <div class="entry-header">
+      <strong>{{ post.name }}</strong>
+      <small>{{ post.created_at.strftime('%b %d, %Y %H:%M') }}</small>
+    </div>
+    <p>{{ post.content }}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% endcall %}
+
+<script>
+  document.getElementById('timeline-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const form = event.target;
+
+    const response = await fetch('/api/timeline_post', {
+      method: 'POST',
+      body: new FormData(form),
+    });
+    if (!response.ok) {
+      alert('Could not add your post. Please try again.');
+      return;
+    }
+    const post = await response.json();
+
+    const entry = document.createElement('li');
+    entry.className = 'entry';
+    entry.dataset.id = post.id;
+
+    const header = document.createElement('div');
+    header.className = 'entry-header';
+
+    const name = document.createElement('strong');
+    name.textContent = post.name;
+
+    const date = document.createElement('small');
+    date.textContent = new Date(post.created_at).toLocaleString(undefined, {
+      dateStyle: 'medium',
+      timeStyle: 'short',
+    });
+
+    header.append(name, date);
+
+    const content = document.createElement('p');
+    content.textContent = post.content;
+
+    entry.append(header, content);
+
+    const list = document.getElementById('timeline-list');
+    list.insertBefore(entry, list.firstChild);
+
+    form.reset();
+  });
+</script>
+{% endblock %}

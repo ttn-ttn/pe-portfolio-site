@@ -619,3 +619,61 @@ body {
     text-align: center;
   }
 }
+
+.timeline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timeline-form .form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.timeline-form input,
+.timeline-form textarea {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 10px 12px;
+  border: 1px solid #e6e8ef;
+  border-radius: 8px;
+  background: #fafbff;
+  color: #1a1a2e;
+  resize: vertical;
+}
+
+.timeline-form .form-row input {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.timeline-form input:focus,
+.timeline-form textarea:focus {
+  outline: none;
+  border-color: #1d539f;
+  background: #ffffff;
+}
+
+.timeline-form button {
+  align-self: flex-start;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #1d539f;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+.timeline-form button:hover {
+  background: #17427e;
+}
+
+@media (max-width: 520px) {
+  .timeline-form .form-row {
+    flex-direction: column;
+  }
+}

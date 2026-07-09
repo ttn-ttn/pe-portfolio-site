@@ -68,6 +68,14 @@ def delete_time_line_post():
      
     TimelinePost.delete_by_id(post_id)
     return model_to_dict(post), 200
+
+@app.route('/timeline')
+def timeline():
+    posts = [
+        model_to_dict(p)
+        for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())
+    ]
+    return render_template('timeline.html', title='Timeline', timeline_posts=posts)
     
 @app.context_processor
 def inject_content():

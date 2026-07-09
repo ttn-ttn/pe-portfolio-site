@@ -35,6 +35,10 @@
 	    {{ link.name }}
 	  </a>
 	  {% endfor %}
+	  <a href="/timeline"
+	    {% if request.path == '/timeline' %}class="active"{% endif %}>
+	    Timeline
+	  </a>
 	</nav>
       </div>
     </header>
