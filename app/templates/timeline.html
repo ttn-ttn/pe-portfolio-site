@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% from "card.html" import card %}
+
+{% block content %}
+{% call card(title="Timeline") %}
+  <form id="timeline-form" class="timeline-form">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    </div>
+    <div class="form-row">
+      <label for="content">Message</label>
+      <textarea id="content" name="content" rows="3" placeholder="What's on your mind?" required></textarea>
+    </div>
+    <button type="submit">Post</button>
+    <p id="timeline-error" class="timeline-error" role="alert" hidden></p>
+  </form>
+{% endcall %}
+
+{% call card() %}
+  <ul id="timeline-list" class="timeline-list"></ul>
+{% endcall %}
+
+<script type="module">
+  import { initTimeline } from "{{ url_for('static', filename='js/timeline.js') }}";
+  initTimeline();
+</script>
+{% endblock %}

@@ -12,6 +12,9 @@ nav:
   - name: "Places Visited"
     url: "/travel"
     template: "travel.html"
+  - name: "Timeline"
+    url: "/timeline"
+    template: "timeline.html"
 
 # Personal data
 personal:
