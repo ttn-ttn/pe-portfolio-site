@@ -55,8 +55,8 @@ for page in content['nav']:
 def post_time_line_post():
     name = request.form['name']
     email = request.form['email']
-    context = request.form['context']
-    timeline_post = TimelinePost.create(name=name, email=email, context=content)
+    content = request.form['content']
+    timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
     return model_to_dict(timeline_post)
 
