@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t portfolio-test .
+      - run: docker run --rm -e TESTING=true portfolio-test .venv/bin/python -m unittest discover -v tests/
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    environment: env
+    steps:
+      - uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ vars.VPS_HOST }}
+          username: root
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: /srv/portfolio/redeploy-portfolio.sh
