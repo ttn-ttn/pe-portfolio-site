@@ -13,6 +13,22 @@ services:
       mysql:
         condition: service_healthy
 
+  nginx:
+    container_name: nginx
+    image: jonasal/nginx-certbot:5
+    restart: always
+    profiles: ["prod"]
+    environment:
+      CERTBOT_EMAIL: ${CERTBOT_EMAIL}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./user_conf.d:/etc/nginx/user_conf.d:ro
+      - nginx_secrets:/etc/letsencrypt
+    depends_on:
+      - portfolio
+
   mysql:
     container_name: mysql
     image: mariadb:12.3
@@ -36,3 +52,4 @@ services:
 
 volumes:
   mydatabase:
+  nginx_secrets:
