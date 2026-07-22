@@ -7,11 +7,6 @@ services:
       - .env
     ports:
       - "5000:5000"
-    volumes:
-      - .:/portfolio
-      # Anonymous volume shields the image's venv from the bind mount above;
-      # the host .venv targets an interpreter that does not exist here.
-      - /portfolio/.venv
     depends_on:
       mysql:
         condition: service_healthy
