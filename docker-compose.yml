@@ -5,8 +5,10 @@ services:
     restart: always
     env_file:
       - .env
+    environment:
+      MYSQL_HOST: mysql
     ports:
-      - "5000:5000"
+      - "127.0.0.1:5000:5000"
     depends_on:
       mysql:
         condition: service_healthy

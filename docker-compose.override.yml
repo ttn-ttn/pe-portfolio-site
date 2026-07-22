@@ -1,0 +1,6 @@
+services:
+  portfolio:
+    volumes:
+      - ./app:/portfolio/app:ro
+      - ./content.yaml:/portfolio/content.yaml:ro
+    command: [".venv/bin/flask", "run", "--host=0.0.0.0", "--debug", "--extra-files", "content.yaml"]
