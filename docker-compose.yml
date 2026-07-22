@@ -17,14 +17,15 @@ services:
     container_name: nginx
     image: jonasal/nginx-certbot:5
     restart: always
-    profiles: ["prod"]
     environment:
       CERTBOT_EMAIL: ${CERTBOT_EMAIL}
+      SERVER_NAME: ${SERVER_NAME}
+      NGINX_ENVSUBST_FILTER: SERVER_NAME
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./user_conf.d:/etc/nginx/user_conf.d:ro
+      - ./nginx/templates:/etc/nginx/templates:ro
       - nginx_secrets:/etc/letsencrypt
     depends_on:
       - portfolio

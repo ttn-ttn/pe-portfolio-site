@@ -4,3 +4,8 @@ services:
       - ./app:/portfolio/app:ro
       - ./content.yaml:/portfolio/content.yaml:ro
     command: [".venv/bin/flask", "run", "--host=0.0.0.0", "--debug", "--extra-files", "content.yaml"]
+
+  nginx:
+    environment:
+      USE_LOCAL_CA: 1
+      SERVER_NAME: portfolio.tomasortin.local

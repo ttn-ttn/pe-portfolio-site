@@ -5,7 +5,7 @@ PROJECT_DIR="/srv/portfolio"
 PROJECT_USER="portfolio"
 SITE_URL="https://tomasortin.duckdns.org/"
 
-COMPOSE="docker compose -f docker-compose.yml --profile prod"
+COMPOSE="docker compose -f docker-compose.yml"
 
 cd "$PROJECT_DIR"
 
