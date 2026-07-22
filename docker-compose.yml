@@ -1,0 +1,41 @@
+services:
+  portfolio:
+    container_name: portfolio
+    build: .
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/portfolio
+      # Anonymous volume shields the image's venv from the bind mount above;
+      # the host .venv targets an interpreter that does not exist here.
+      - /portfolio/.venv
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  mysql:
+    container_name: mysql
+    image: mariadb:12.3
+    restart: always
+    # Named explicitly rather than via env_file: MYSQL_HOST would otherwise
+    # reach the mariadb client here and redirect its socket connections,
+    # including the healthcheck's, over TCP.
+    environment:
+      # The app connects as MARIADB_USER, so nothing needs the root password.
+      MARIADB_RANDOM_ROOT_PASSWORD: "yes"
+      MARIADB_DATABASE: ${MYSQL_DATABASE}
+      MARIADB_USER: ${MYSQL_USER}
+      MARIADB_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - mydatabase:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mydatabase:
