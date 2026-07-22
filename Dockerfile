@@ -9,9 +9,15 @@ ENV UV_NO_DEV=1
 COPY pyproject.toml uv.lock ./
 RUN uv sync --locked --no-install-project
 
-COPY . .
-RUN uv sync --locked
+RUN useradd --create-home --uid 1000 app
+
+COPY --chown=app:app . .
+RUN uv sync --locked && chown -R app:app /portfolio/.venv
+
+USER app
 
 EXPOSE 5000
 
-CMD ["uv", "run", "gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "app:app"]
+# The venv's gunicorn directly, rather than `uv run`: no environment
+# revalidation at startup, and nothing needs write access to /portfolio.
+CMD [".venv/bin/gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "app:app"]
